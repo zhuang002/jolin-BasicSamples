@@ -20,16 +20,33 @@ public class BasicSamples {
 		
 		System.out.println("min="+min+",max="+max+",sum="+sum);
 		
+		int a=9;
+		int b=5;
+		int temp=a;
+		a=b;
+		b=temp;
+		System.out.println("a="+a+",b="+b);
+		
 	}
 
 	private static int getSum(int[] ar) {
 		// TODO Auto-generated method stub
-		return 0;
+		int sum=0;
+		for (int i=0;i<ar.length;i++) {
+			sum+=ar[i];
+		}
+		return sum;
 	}
 
 	private static int getMax(int[] ar) {
 		// TODO Auto-generated method stub
-		return 0;
+		int max=Integer.MIN_VALUE;
+		for (int i=0;i<ar.length;i++) {
+			if (max<ar[i]) {
+				max=ar[i];
+			}
+		}
+		return max;
 	}
 
 	private static int getMin(int[] ar) {
